@@ -2168,6 +2168,83 @@ body {
     border-color: var(--primary-600);
     color: white;
 }
+      .resource-card {
+    padding: 1.5rem;
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: none;
+}
+
+.resource-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
+}
+
+.resource-icon {
+    width: 70px;
+    height: 70px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    backdrop-filter: blur(10px);
+}
+
+.resource-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: white;
+    font-weight: 700;
+}
+
+.resource-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.resource-link {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s;
+    backdrop-filter: blur(10px);
+}
+
+.resource-link:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateX(10px);
+}
+
+.resource-link i {
+    font-size: 1.125rem;
+}
+
+.resource-link div {
+    flex: 1;
+}
+
+.resource-link strong {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    font-size: 0.95rem;
+}
+
+.resource-link span {
+    font-size: 0.85rem;
+    opacity: 0.9;
+}  
 
 /* Mindset Page */
 .mindset-hero {
