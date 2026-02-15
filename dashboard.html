@@ -3122,59 +3122,72 @@ body {
     }
 }
 
-    /* ================================
-   DARK MODE OVERRIDE PACK
-   Paste this at the END of your CSS
-   ================================ */
+   /* ==========================================
+   PREMIUM DARK MODE (Paste at END of CSS)
+   Makes the UI look clean, modern & attractive
+   ========================================== */
 
-.dark-theme,
+.dark-theme {
+    --bg-primary: #0b1220;
+    --bg-secondary: #0f1a2b;
+    --bg-tertiary: #14233a;
+    --bg-card: rgba(255, 255, 255, 0.04);
+    --bg-card-solid: #0f1a2b;
+
+    --text-primary: #f8fafc;
+    --text-secondary: rgba(248, 250, 252, 0.72);
+    --text-tertiary: rgba(248, 250, 252, 0.55);
+    --text-muted: rgba(248, 250, 252, 0.35);
+
+    --border-light: rgba(255, 255, 255, 0.08);
+    --border-medium: rgba(255, 255, 255, 0.14);
+    --border-dark: rgba(255, 255, 255, 0.22);
+
+    --shadow-sm: 0 6px 18px rgba(0, 0, 0, 0.25);
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.30);
+    --shadow-md: 0 14px 45px rgba(0, 0, 0, 0.35);
+    --shadow-lg: 0 18px 65px rgba(0, 0, 0, 0.45);
+
+    --glow-blue: 0 0 0 4px rgba(59, 130, 246, 0.15);
+}
+
+/* Smooth fonts + better rendering */
+.dark-theme * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Background */
 .dark-theme body,
 .dark-theme html {
-    background: var(--bg-primary) !important;
-    color: var(--text-primary) !important;
+    background: radial-gradient(1200px 700px at 20% 0%, rgba(59, 130, 246, 0.12), transparent 60%),
+                radial-gradient(900px 600px at 90% 20%, rgba(34, 211, 238, 0.08), transparent 60%),
+                linear-gradient(180deg, #070b13, #0b1220 40%, #070b13);
+    color: var(--text-primary);
 }
 
-/* Force main containers */
-.dark-theme .dashboard-container,
-.dark-theme .dashboard-main,
-.dark-theme .main-content,
-.dark-theme .content,
-.dark-theme .container,
-.dark-theme .wrapper {
-    background: var(--bg-primary) !important;
-    color: var(--text-primary) !important;
-}
-
-/* Navbar / Header */
+/* Nav & sidebar - premium glass */
 .dark-theme nav,
 .dark-theme header,
-.dark-theme .navbar,
 .dark-theme .dashboard-nav,
-.dark-theme .top-nav,
-.dark-theme .header,
-.dark-theme .nav-bar {
-    background: var(--bg-nav) !important;
+.dark-theme .navbar {
+    background: rgba(8, 12, 20, 0.65) !important;
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
     border-bottom: 1px solid var(--border-light) !important;
-    color: var(--text-primary) !important;
 }
 
-/* Sidebar */
 .dark-theme aside,
-.dark-theme .sidebar,
 .dark-theme .dashboard-sidebar,
-.dark-theme .side-nav,
-.dark-theme .left-panel {
-    background: var(--bg-sidebar) !important;
+.dark-theme .sidebar {
+    background: rgba(8, 12, 20, 0.55) !important;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
     border-right: 1px solid var(--border-light) !important;
-    color: var(--text-primary) !important;
 }
 
-/* Cards, Sections, Panels */
+/* Cards - glass style */
 .dark-theme .card,
-.dark-theme .panel,
-.dark-theme .box,
-.dark-theme .section,
-.dark-theme .widget,
 .dark-theme .stat-card-premium,
 .dark-theme .quick-trade-premium,
 .dark-theme .recent-activity-premium,
@@ -3188,133 +3201,177 @@ body {
 .dark-theme .mindset-tips-premium,
 .dark-theme .balance-overview-premium,
 .dark-theme .table-card,
-.dark-theme .chart-card {
-    background: var(--bg-card) !important;
-    border: 1px solid var(--border-light) !important;
+.dark-theme .chart-card,
+.dark-theme .settings-card,
+.dark-theme .profile-card,
+.dark-theme .panel,
+.dark-theme .box,
+.dark-theme section {
+    background: rgba(255, 255, 255, 0.04) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
     box-shadow: var(--shadow) !important;
-    color: var(--text-primary) !important;
+    border-radius: 18px !important;
 }
 
-/* Headings and text */
+/* Make cards pop on hover */
+.dark-theme .card:hover,
+.dark-theme .stat-card-premium:hover,
+.dark-theme .transaction-card:hover,
+.dark-theme .analytics-card:hover,
+.dark-theme .resource-card:hover {
+    border-color: rgba(59, 130, 246, 0.35) !important;
+    transform: translateY(-2px);
+    transition: 0.25s ease;
+}
+
+/* Headings */
 .dark-theme h1,
 .dark-theme h2,
 .dark-theme h3,
 .dark-theme h4,
-.dark-theme h5,
-.dark-theme h6,
-.dark-theme strong,
-.dark-theme b {
+.dark-theme h5 {
     color: var(--text-primary) !important;
 }
 
+/* Normal text */
 .dark-theme p,
 .dark-theme span,
 .dark-theme small,
 .dark-theme label,
-.dark-theme .text,
 .dark-theme .stat-label,
 .dark-theme .stat-sub,
-.dark-theme .metric-label,
-.dark-theme .balance-label {
+.dark-theme .metric-label {
     color: var(--text-secondary) !important;
 }
 
-/* Links */
-.dark-theme a {
-    color: #60a5fa !important;
+/* Muted text */
+.dark-theme .muted,
+.dark-theme .subtitle,
+.dark-theme .hint {
+    color: var(--text-tertiary) !important;
 }
 
-.dark-theme a:hover {
-    color: #93c5fd !important;
-}
-
-/* Inputs */
+/* Inputs - premium */
 .dark-theme input,
 .dark-theme select,
 .dark-theme textarea {
-    background: var(--bg-secondary) !important;
+    background: rgba(255, 255, 255, 0.04) !important;
     color: var(--text-primary) !important;
-    border: 1px solid var(--border-medium) !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    border-radius: 14px !important;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
 }
 
 .dark-theme input::placeholder,
 .dark-theme textarea::placeholder {
-    color: var(--text-muted) !important;
+    color: rgba(248, 250, 252, 0.35) !important;
 }
 
 .dark-theme input:focus,
 .dark-theme select:focus,
 .dark-theme textarea:focus {
     outline: none !important;
-    border-color: #3b82f6 !important;
-    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25) !important;
+    border-color: rgba(59, 130, 246, 0.55) !important;
+    box-shadow: var(--glow-blue) !important;
 }
 
 /* Buttons */
 .dark-theme button,
 .dark-theme .btn,
-.dark-theme .button,
 .dark-theme .premium-btn,
-.dark-theme .btn-primary,
-.dark-theme .btn-secondary {
-    background: var(--bg-tertiary) !important;
-    color: var(--text-primary) !important;
-    border: 1px solid var(--border-medium) !important;
+.dark-theme .button {
+    background: linear-gradient(180deg, rgba(59, 130, 246, 0.95), rgba(37, 99, 235, 0.95)) !important;
+    color: white !important;
+    border: 1px solid rgba(59, 130, 246, 0.35) !important;
+    border-radius: 14px !important;
+    box-shadow: 0 10px 25px rgba(37, 99, 235, 0.20) !important;
 }
 
 .dark-theme button:hover,
 .dark-theme .btn:hover,
-.dark-theme .button:hover {
-    background: #475569 !important;
+.dark-theme .premium-btn:hover {
+    filter: brightness(1.08);
+    transform: translateY(-1px);
+    transition: 0.2s ease;
 }
 
-/* Dropdowns */
-.dark-theme .dropdown,
-.dark-theme .dropdown-menu,
-.dark-theme .menu,
-.dark-theme .select-menu {
-    background: var(--bg-dropdown) !important;
-    border: 1px solid var(--border-light) !important;
+/* Secondary buttons */
+.dark-theme .btn-secondary,
+.dark-theme .button-secondary {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.14) !important;
     color: var(--text-primary) !important;
+}
+
+/* Sidebar links */
+.dark-theme .sidebar a,
+.dark-theme .dashboard-sidebar a,
+.dark-theme .nav-link,
+.dark-theme .sidebar-link {
+    color: rgba(248, 250, 252, 0.70) !important;
+}
+
+.dark-theme .sidebar a:hover,
+.dark-theme .dashboard-sidebar a:hover,
+.dark-theme .nav-link:hover,
+.dark-theme .sidebar-link:hover {
+    color: white !important;
+    background: rgba(59, 130, 246, 0.12) !important;
+    border-radius: 12px;
+}
+
+/* Active menu item */
+.dark-theme .active,
+.dark-theme .sidebar .active,
+.dark-theme .dashboard-sidebar .active {
+    background: rgba(59, 130, 246, 0.18) !important;
+    color: white !important;
+    border: 1px solid rgba(59, 130, 246, 0.22) !important;
+    border-radius: 12px;
 }
 
 /* Tables */
 .dark-theme table {
-    background: var(--bg-card) !important;
+    background: transparent !important;
     color: var(--text-primary) !important;
 }
 
 .dark-theme th {
-    background: var(--bg-tertiary) !important;
-    color: var(--text-secondary) !important;
-    border-bottom: 1px solid var(--border-light) !important;
+    background: rgba(255, 255, 255, 0.04) !important;
+    color: rgba(248, 250, 252, 0.75) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
 }
 
 .dark-theme td {
-    border-bottom: 1px solid var(--border-light) !important;
-    color: var(--text-primary) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06) !important;
+    color: rgba(248, 250, 252, 0.78) !important;
 }
 
 .dark-theme tr:hover td {
-    background: var(--bg-secondary) !important;
+    background: rgba(59, 130, 246, 0.08) !important;
 }
 
-/* Scrollbar (Chrome / Edge) */
+/* Dividers */
+.dark-theme hr {
+    border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Scrollbar */
 .dark-theme ::-webkit-scrollbar {
     width: 10px;
 }
 
 .dark-theme ::-webkit-scrollbar-track {
-    background: var(--bg-primary);
+    background: rgba(255, 255, 255, 0.03);
 }
 
 .dark-theme ::-webkit-scrollbar-thumb {
-    background: var(--border-medium);
-    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.10);
+    border-radius: 12px;
 }
 
 .dark-theme ::-webkit-scrollbar-thumb:hover {
-    background: var(--border-dark);
+    background: rgba(255, 255, 255, 0.18);
 }
       </style>
 </head>
