@@ -3121,7 +3121,202 @@ body {
         page-break-inside: avoid;
     }
 }
-    </style>
+
+    /* ================================
+   DARK MODE OVERRIDE PACK
+   Paste this at the END of your CSS
+   ================================ */
+
+.dark-theme,
+.dark-theme body,
+.dark-theme html {
+    background: var(--bg-primary) !important;
+    color: var(--text-primary) !important;
+}
+
+/* Force main containers */
+.dark-theme .dashboard-container,
+.dark-theme .dashboard-main,
+.dark-theme .main-content,
+.dark-theme .content,
+.dark-theme .container,
+.dark-theme .wrapper {
+    background: var(--bg-primary) !important;
+    color: var(--text-primary) !important;
+}
+
+/* Navbar / Header */
+.dark-theme nav,
+.dark-theme header,
+.dark-theme .navbar,
+.dark-theme .dashboard-nav,
+.dark-theme .top-nav,
+.dark-theme .header,
+.dark-theme .nav-bar {
+    background: var(--bg-nav) !important;
+    border-bottom: 1px solid var(--border-light) !important;
+    color: var(--text-primary) !important;
+}
+
+/* Sidebar */
+.dark-theme aside,
+.dark-theme .sidebar,
+.dark-theme .dashboard-sidebar,
+.dark-theme .side-nav,
+.dark-theme .left-panel {
+    background: var(--bg-sidebar) !important;
+    border-right: 1px solid var(--border-light) !important;
+    color: var(--text-primary) !important;
+}
+
+/* Cards, Sections, Panels */
+.dark-theme .card,
+.dark-theme .panel,
+.dark-theme .box,
+.dark-theme .section,
+.dark-theme .widget,
+.dark-theme .stat-card-premium,
+.dark-theme .quick-trade-premium,
+.dark-theme .recent-activity-premium,
+.dark-theme .transaction-card,
+.dark-theme .analytics-card,
+.dark-theme .goals-input-card,
+.dark-theme .goals-list-container,
+.dark-theme .community-card-premium,
+.dark-theme .resource-card,
+.dark-theme .principle-card,
+.dark-theme .mindset-tips-premium,
+.dark-theme .balance-overview-premium,
+.dark-theme .table-card,
+.dark-theme .chart-card {
+    background: var(--bg-card) !important;
+    border: 1px solid var(--border-light) !important;
+    box-shadow: var(--shadow) !important;
+    color: var(--text-primary) !important;
+}
+
+/* Headings and text */
+.dark-theme h1,
+.dark-theme h2,
+.dark-theme h3,
+.dark-theme h4,
+.dark-theme h5,
+.dark-theme h6,
+.dark-theme strong,
+.dark-theme b {
+    color: var(--text-primary) !important;
+}
+
+.dark-theme p,
+.dark-theme span,
+.dark-theme small,
+.dark-theme label,
+.dark-theme .text,
+.dark-theme .stat-label,
+.dark-theme .stat-sub,
+.dark-theme .metric-label,
+.dark-theme .balance-label {
+    color: var(--text-secondary) !important;
+}
+
+/* Links */
+.dark-theme a {
+    color: #60a5fa !important;
+}
+
+.dark-theme a:hover {
+    color: #93c5fd !important;
+}
+
+/* Inputs */
+.dark-theme input,
+.dark-theme select,
+.dark-theme textarea {
+    background: var(--bg-secondary) !important;
+    color: var(--text-primary) !important;
+    border: 1px solid var(--border-medium) !important;
+}
+
+.dark-theme input::placeholder,
+.dark-theme textarea::placeholder {
+    color: var(--text-muted) !important;
+}
+
+.dark-theme input:focus,
+.dark-theme select:focus,
+.dark-theme textarea:focus {
+    outline: none !important;
+    border-color: #3b82f6 !important;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25) !important;
+}
+
+/* Buttons */
+.dark-theme button,
+.dark-theme .btn,
+.dark-theme .button,
+.dark-theme .premium-btn,
+.dark-theme .btn-primary,
+.dark-theme .btn-secondary {
+    background: var(--bg-tertiary) !important;
+    color: var(--text-primary) !important;
+    border: 1px solid var(--border-medium) !important;
+}
+
+.dark-theme button:hover,
+.dark-theme .btn:hover,
+.dark-theme .button:hover {
+    background: #475569 !important;
+}
+
+/* Dropdowns */
+.dark-theme .dropdown,
+.dark-theme .dropdown-menu,
+.dark-theme .menu,
+.dark-theme .select-menu {
+    background: var(--bg-dropdown) !important;
+    border: 1px solid var(--border-light) !important;
+    color: var(--text-primary) !important;
+}
+
+/* Tables */
+.dark-theme table {
+    background: var(--bg-card) !important;
+    color: var(--text-primary) !important;
+}
+
+.dark-theme th {
+    background: var(--bg-tertiary) !important;
+    color: var(--text-secondary) !important;
+    border-bottom: 1px solid var(--border-light) !important;
+}
+
+.dark-theme td {
+    border-bottom: 1px solid var(--border-light) !important;
+    color: var(--text-primary) !important;
+}
+
+.dark-theme tr:hover td {
+    background: var(--bg-secondary) !important;
+}
+
+/* Scrollbar (Chrome / Edge) */
+.dark-theme ::-webkit-scrollbar {
+    width: 10px;
+}
+
+.dark-theme ::-webkit-scrollbar-track {
+    background: var(--bg-primary);
+}
+
+.dark-theme ::-webkit-scrollbar-thumb {
+    background: var(--border-medium);
+    border-radius: 10px;
+}
+
+.dark-theme ::-webkit-scrollbar-thumb:hover {
+    background: var(--border-dark);
+}
+      </style>
 </head>
 <body>
     <!-- Premium Loading Screen -->
