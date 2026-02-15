@@ -3122,17 +3122,19 @@ body {
     }
 }
 
-   /* ==========================================
-   PREMIUM DARK MODE (Paste at END of CSS)
-   Makes the UI look clean, modern & attractive
-   ========================================== */
+   /* =========================================================
+   FX TAE PREMIUM DARK MODE (FINAL)
+   Paste at END of CSS — No need to edit other code
+   ========================================================= */
 
+/* 1) Theme Variables */
 .dark-theme {
-    --bg-primary: #0b1220;
-    --bg-secondary: #0f1a2b;
-    --bg-tertiary: #14233a;
-    --bg-card: rgba(255, 255, 255, 0.04);
-    --bg-card-solid: #0f1a2b;
+    --bg-primary: #070b13;
+    --bg-secondary: #0b1220;
+    --bg-tertiary: #0f1a2b;
+
+    --bg-card: rgba(255, 255, 255, 0.05);
+    --bg-card-strong: rgba(255, 255, 255, 0.08);
 
     --text-primary: #f8fafc;
     --text-secondary: rgba(248, 250, 252, 0.72);
@@ -3141,37 +3143,34 @@ body {
 
     --border-light: rgba(255, 255, 255, 0.08);
     --border-medium: rgba(255, 255, 255, 0.14);
-    --border-dark: rgba(255, 255, 255, 0.22);
 
-    --shadow-sm: 0 6px 18px rgba(0, 0, 0, 0.25);
-    --shadow: 0 10px 30px rgba(0, 0, 0, 0.30);
-    --shadow-md: 0 14px 45px rgba(0, 0, 0, 0.35);
-    --shadow-lg: 0 18px 65px rgba(0, 0, 0, 0.45);
+    --shadow-soft: 0 10px 35px rgba(0, 0, 0, 0.35);
+    --shadow-strong: 0 18px 65px rgba(0, 0, 0, 0.55);
 
-    --glow-blue: 0 0 0 4px rgba(59, 130, 246, 0.15);
+    --glow-blue: 0 0 0 4px rgba(59, 130, 246, 0.16);
 }
 
-/* Smooth fonts + better rendering */
+/* 2) Global background + text */
+.dark-theme,
+.dark-theme body,
+.dark-theme html {
+    background: radial-gradient(1200px 700px at 20% 0%, rgba(59, 130, 246, 0.14), transparent 60%),
+                radial-gradient(900px 600px at 90% 20%, rgba(34, 211, 238, 0.10), transparent 60%),
+                linear-gradient(180deg, #05070d, #070b13 35%, #05070d);
+    color: var(--text-primary) !important;
+}
+
 .dark-theme * {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
-/* Background */
-.dark-theme body,
-.dark-theme html {
-    background: radial-gradient(1200px 700px at 20% 0%, rgba(59, 130, 246, 0.12), transparent 60%),
-                radial-gradient(900px 600px at 90% 20%, rgba(34, 211, 238, 0.08), transparent 60%),
-                linear-gradient(180deg, #070b13, #0b1220 40%, #070b13);
-    color: var(--text-primary);
-}
-
-/* Nav & sidebar - premium glass */
+/* 3) Sidebar + Top nav glass */
 .dark-theme nav,
 .dark-theme header,
 .dark-theme .dashboard-nav,
 .dark-theme .navbar {
-    background: rgba(8, 12, 20, 0.65) !important;
+    background: rgba(8, 12, 20, 0.70) !important;
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
     border-bottom: 1px solid var(--border-light) !important;
@@ -3180,14 +3179,17 @@ body {
 .dark-theme aside,
 .dark-theme .dashboard-sidebar,
 .dark-theme .sidebar {
-    background: rgba(8, 12, 20, 0.55) !important;
+    background: rgba(8, 12, 20, 0.60) !important;
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     border-right: 1px solid var(--border-light) !important;
 }
 
-/* Cards - glass style */
+/* 4) ALL cards/panels become premium */
 .dark-theme .card,
+.dark-theme .panel,
+.dark-theme .box,
+.dark-theme section,
 .dark-theme .stat-card-premium,
 .dark-theme .quick-trade-premium,
 .dark-theme .recent-activity-premium,
@@ -3204,67 +3206,46 @@ body {
 .dark-theme .chart-card,
 .dark-theme .settings-card,
 .dark-theme .profile-card,
-.dark-theme .panel,
-.dark-theme .box,
-.dark-theme section {
-    background: rgba(255, 255, 255, 0.04) !important;
-    border: 1px solid rgba(255, 255, 255, 0.08) !important;
-    box-shadow: var(--shadow) !important;
+.dark-theme .activity-table-container,
+.dark-theme .transaction-table-container,
+.dark-theme .all-trades-table-container {
+    background: var(--bg-card) !important;
+    border: 1px solid var(--border-light) !important;
     border-radius: 18px !important;
+    box-shadow: var(--shadow-soft) !important;
 }
 
-/* Make cards pop on hover */
-.dark-theme .card:hover,
-.dark-theme .stat-card-premium:hover,
-.dark-theme .transaction-card:hover,
-.dark-theme .analytics-card:hover,
-.dark-theme .resource-card:hover {
-    border-color: rgba(59, 130, 246, 0.35) !important;
-    transform: translateY(-2px);
-    transition: 0.25s ease;
-}
-
-/* Headings */
+/* 5) Fix headings & text */
 .dark-theme h1,
 .dark-theme h2,
 .dark-theme h3,
 .dark-theme h4,
-.dark-theme h5 {
+.dark-theme h5,
+.dark-theme strong,
+.dark-theme b {
     color: var(--text-primary) !important;
 }
 
-/* Normal text */
 .dark-theme p,
 .dark-theme span,
 .dark-theme small,
-.dark-theme label,
-.dark-theme .stat-label,
-.dark-theme .stat-sub,
-.dark-theme .metric-label {
+.dark-theme label {
     color: var(--text-secondary) !important;
 }
 
-/* Muted text */
-.dark-theme .muted,
-.dark-theme .subtitle,
-.dark-theme .hint {
-    color: var(--text-tertiary) !important;
-}
-
-/* Inputs - premium */
+/* 6) Inputs */
 .dark-theme input,
 .dark-theme select,
 .dark-theme textarea {
-    background: rgba(255, 255, 255, 0.04) !important;
+    background: rgba(255, 255, 255, 0.05) !important;
     color: var(--text-primary) !important;
-    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    border: 1px solid var(--border-medium) !important;
     border-radius: 14px !important;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
 }
 
 .dark-theme input::placeholder,
 .dark-theme textarea::placeholder {
-    color: rgba(248, 250, 252, 0.35) !important;
+    color: var(--text-muted) !important;
 }
 
 .dark-theme input:focus,
@@ -3275,7 +3256,7 @@ body {
     box-shadow: var(--glow-blue) !important;
 }
 
-/* Buttons */
+/* 7) Buttons */
 .dark-theme button,
 .dark-theme .btn,
 .dark-theme .premium-btn,
@@ -3284,7 +3265,7 @@ body {
     color: white !important;
     border: 1px solid rgba(59, 130, 246, 0.35) !important;
     border-radius: 14px !important;
-    box-shadow: 0 10px 25px rgba(37, 99, 235, 0.20) !important;
+    box-shadow: 0 12px 30px rgba(37, 99, 235, 0.20) !important;
 }
 
 .dark-theme button:hover,
@@ -3295,15 +3276,7 @@ body {
     transition: 0.2s ease;
 }
 
-/* Secondary buttons */
-.dark-theme .btn-secondary,
-.dark-theme .button-secondary {
-    background: rgba(255, 255, 255, 0.05) !important;
-    border: 1px solid rgba(255, 255, 255, 0.14) !important;
-    color: var(--text-primary) !important;
-}
-
-/* Sidebar links */
+/* 8) Sidebar links */
 .dark-theme .sidebar a,
 .dark-theme .dashboard-sidebar a,
 .dark-theme .nav-link,
@@ -3316,62 +3289,92 @@ body {
 .dark-theme .nav-link:hover,
 .dark-theme .sidebar-link:hover {
     color: white !important;
-    background: rgba(59, 130, 246, 0.12) !important;
+    background: rgba(59, 130, 246, 0.14) !important;
     border-radius: 12px;
 }
 
-/* Active menu item */
 .dark-theme .active,
 .dark-theme .sidebar .active,
 .dark-theme .dashboard-sidebar .active {
-    background: rgba(59, 130, 246, 0.18) !important;
+    background: rgba(59, 130, 246, 0.20) !important;
     color: white !important;
     border: 1px solid rgba(59, 130, 246, 0.22) !important;
     border-radius: 12px;
 }
 
-/* Tables */
-.dark-theme table {
+/* =========================================================
+   9) THE IMPORTANT PART: Fix the Recent Activity table
+   (This is what your screenshot is showing)
+   ========================================================= */
+
+.dark-theme table,
+.dark-theme .activity-table,
+.dark-theme .transaction-table,
+.dark-theme .all-trades-table {
+    width: 100%;
     background: transparent !important;
     color: var(--text-primary) !important;
+    border-collapse: collapse !important;
 }
 
+/* Table container */
+.dark-theme .activity-table-container,
+.dark-theme .transaction-table-container,
+.dark-theme .all-trades-table-container {
+    overflow: hidden !important;
+}
+
+/* Table header */
+.dark-theme thead,
 .dark-theme th {
-    background: rgba(255, 255, 255, 0.04) !important;
-    color: rgba(248, 250, 252, 0.75) !important;
+    background: rgba(255, 255, 255, 0.06) !important;
+    color: rgba(248, 250, 252, 0.80) !important;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
 }
 
+/* Table body rows */
+.dark-theme tbody tr {
+    background: rgba(255, 255, 255, 0.03) !important;
+}
+
+.dark-theme tbody tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.045) !important;
+}
+
+/* Table cells */
 .dark-theme td {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.06) !important;
     color: rgba(248, 250, 252, 0.78) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06) !important;
 }
 
-.dark-theme tr:hover td {
-    background: rgba(59, 130, 246, 0.08) !important;
+/* Hover row */
+.dark-theme tbody tr:hover td {
+    background: rgba(59, 130, 246, 0.10) !important;
 }
 
-/* Dividers */
-.dark-theme hr {
-    border-color: rgba(255, 255, 255, 0.08) !important;
+/* Fix badges inside tables */
+.dark-theme .badge,
+.dark-theme .status-badge,
+.dark-theme .type-badge {
+    background: rgba(255, 255, 255, 0.08) !important;
+    border: 1px solid rgba(255, 255, 255, 0.10) !important;
+    color: white !important;
 }
 
-/* Scrollbar */
-.dark-theme ::-webkit-scrollbar {
-    width: 10px;
+/* Fix any element forcing white backgrounds */
+.dark-theme .white,
+.dark-theme .bg-white,
+.dark-theme [style*="background: white"],
+.dark-theme [style*="background-color: white"],
+.dark-theme [style*="background:#fff"],
+.dark-theme [style*="background-color:#fff"] {
+    background: rgba(255, 255, 255, 0.05) !important;
+    color: var(--text-primary) !important;
 }
 
-.dark-theme ::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, 0.03);
-}
-
-.dark-theme ::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0.10);
-    border-radius: 12px;
-}
-
-.dark-theme ::-webkit-scrollbar-thumb:hover {
-    background: rgba(255, 255, 255, 0.18);
+/* 10) Smooth transition between modes */
+body, nav, header, aside, section, div, input, select, textarea, button, table, th, td {
+    transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }
       </style>
 </head>
