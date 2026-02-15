@@ -3121,7 +3121,521 @@ body {
         page-break-inside: avoid;
     }
 }
-      </style>
+ /* ===== FORCED DARK THEME - FULL SCREEN CLEAN ===== */
+.dark-theme,
+.dark-theme body,
+.dark-theme .dashboard-container,
+.dark-theme .dashboard-main,
+.dark-theme .dashboard-nav,
+.dark-theme .dashboard-sidebar,
+.dark-theme .stat-card-premium,
+.dark-theme .quick-trade-premium,
+.dark-theme .recent-activity-premium,
+.dark-theme .analytics-card,
+.dark-theme .transaction-card,
+.dark-theme .goals-input-card,
+.dark-theme .goals-list-container,
+.dark-theme .community-card-premium,
+.dark-theme .resource-card,
+.dark-theme .principle-card,
+.dark-theme .settings-card,
+.dark-theme .contact-info-premium,
+.dark-theme .mentorship-premium-card,
+.dark-theme .balance-overview-premium,
+.dark-theme .transaction-history-premium,
+.dark-theme .modal-content-premium,
+.dark-theme .calendar-day,
+.dark-theme .metric-card,
+.dark-theme .tip-slide,
+.dark-theme .sidebar-balance,
+.dark-theme .user-profile-mini,
+.dark-theme .date-time-display,
+.dark-theme .premium-input,
+.dark-theme .premium-select,
+.dark-theme .premium-textarea,
+.dark-theme .activity-table,
+.dark-theme .transaction-table,
+.dark-theme .all-trades-table,
+.dark-theme .toast {
+    background-color: #111827 !important;
+    color: #f3f4f6 !important;
+    border-color: #374151 !important;
+}
+
+/* Dark theme specific backgrounds */
+.dark-theme {
+    background: #111827 !important;
+}
+
+.dark-theme body {
+    background: #111827 !important;
+}
+
+.dark-theme .dashboard-container {
+    background: #111827 !important;
+}
+
+.dark-theme .dashboard-main {
+    background: #111827 !important;
+}
+
+.dark-theme .dashboard-nav {
+    background: #1f2937 !important;
+    border-bottom: 1px solid #374151 !important;
+}
+
+.dark-theme .dashboard-sidebar {
+    background: #1f2937 !important;
+    border-right: 1px solid #374151 !important;
+}
+
+/* Cards and containers */
+.dark-theme .stat-card-premium,
+.dark-theme .quick-trade-premium,
+.dark-theme .recent-activity-premium,
+.dark-theme .analytics-card,
+.dark-theme .transaction-card,
+.dark-theme .goals-input-card,
+.dark-theme .goals-list-container,
+.dark-theme .community-card-premium,
+.dark-theme .resource-card,
+.dark-theme .principle-card,
+.dark-theme .settings-card,
+.dark-theme .contact-info-premium,
+.dark-theme .balance-overview-premium,
+.dark-theme .transaction-history-premium {
+    background: #1f2937 !important;
+    border: 1px solid #374151 !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Text colors */
+.dark-theme h1,
+.dark-theme h2,
+.dark-theme h3,
+.dark-theme h4,
+.dark-theme h5,
+.dark-theme h6,
+.dark-theme .stat-value-large,
+.dark-theme .balance-amount-large,
+.dark-theme .logo-text-small h2,
+.dark-theme .user-name-small,
+.dark-theme .sidebar-user-info h4,
+.dark-theme .metric-card strong,
+.dark-theme .goal-content,
+.dark-theme .principle-card p,
+.dark-theme .resource-card h3 {
+    color: #f9fafb !important;
+}
+
+/* Secondary text */
+.dark-theme .stat-label,
+.dark-theme .stat-sub,
+.dark-theme .menu-section-title,
+.dark-theme .sidebar-user-info p,
+.dark-theme .balance-label,
+.dark-theme .metric-card span,
+.dark-theme .resource-meta,
+.dark-theme .resource-card p,
+.dark-theme .principle-quote,
+.dark-theme .goal-date,
+.dark-theme .contact-method span,
+.dark-theme .contact-method small {
+    color: #9ca3af !important;
+}
+
+/* Inputs and selects */
+.dark-theme .premium-input,
+.dark-theme .premium-select,
+.dark-theme .premium-textarea {
+    background: #374151 !important;
+    border: 1px solid #4b5563 !important;
+    color: #f3f4f6 !important;
+}
+
+.dark-theme .premium-input:focus,
+.dark-theme .premium-select:focus,
+.dark-theme .premium-textarea:focus {
+    border-color: #3b82f6 !important;
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.2) !important;
+    background: #1f2937 !important;
+}
+
+.dark-theme .premium-input::placeholder,
+.dark-theme .premium-select::placeholder,
+.dark-theme .premium-textarea::placeholder {
+    color: #6b7280 !important;
+}
+
+.dark-theme .premium-input:read-only,
+.dark-theme .premium-select:read-only,
+.dark-theme .premium-textarea:read-only {
+    background: #2d3748 !important;
+    color: #9ca3af !important;
+}
+
+/* Buttons */
+.dark-theme .btn-save-trade,
+.dark-theme .btn-save-goal,
+.dark-theme .btn-primary,
+.dark-theme .btn-save-setting {
+    background: linear-gradient(135deg, #3b82f6, #2563eb) !important;
+    color: white !important;
+}
+
+.dark-theme .btn-save-download {
+    background: #2d3748 !important;
+    border: 1px solid #4b5563 !important;
+    color: #f3f4f6 !important;
+}
+
+.dark-theme .btn-save-download:hover {
+    background: #10b981 !important;
+    border-color: #10b981 !important;
+    color: white !important;
+}
+
+.dark-theme .btn-clear,
+.dark-theme .btn-outline,
+.dark-theme .btn-view-all,
+.dark-theme .filter-tab,
+.dark-theme .chart-period-btn,
+.dark-theme .btn-add-strategy {
+    background: #2d3748 !important;
+    border: 1px solid #4b5563 !important;
+    color: #e5e7eb !important;
+}
+
+.dark-theme .btn-clear:hover,
+.dark-theme .btn-outline:hover {
+    border-color: #ef4444 !important;
+    color: #ef4444 !important;
+    background: rgba(239, 68, 68, 0.1) !important;
+}
+
+.dark-theme .filter-tab.active,
+.dark-theme .chart-period-btn.active {
+    background: #3b82f6 !important;
+    border-color: #3b82f6 !important;
+    color: white !important;
+}
+
+/* Tables */
+.dark-theme .activity-table,
+.dark-theme .transaction-table,
+.dark-theme .all-trades-table {
+    background: #1f2937 !important;
+}
+
+.dark-theme .activity-table th,
+.dark-theme .transaction-table th,
+.dark-theme .all-trades-table th {
+    background: #2d3748 !important;
+    color: #e5e7eb !important;
+    border-bottom: 1px solid #4b5563 !important;
+}
+
+.dark-theme .activity-table td,
+.dark-theme .transaction-table td,
+.dark-theme .all-trades-table td {
+    color: #d1d5db !important;
+    border-bottom: 1px solid #374151 !important;
+}
+
+.dark-theme .activity-table tr:hover,
+.dark-theme .transaction-table tr:hover,
+.dark-theme .all-trades-table tr:hover {
+    background: #2d3748 !important;
+}
+
+/* Calendar */
+.dark-theme .calendar-day {
+    background: #2d3748 !important;
+    border: 1px solid #4b5563 !important;
+    color: #f3f4f6 !important;
+}
+
+.dark-theme .calendar-day.empty {
+    background: transparent !important;
+    border: none !important;
+}
+
+.dark-theme .calendar-header {
+    color: #9ca3af !important;
+}
+
+/* Progress bars and indicators */
+.dark-theme .loader-progress-bar,
+.dark-theme .limit-progress {
+    background: #374151 !important;
+}
+
+.dark-theme .loader-progress-fill,
+.dark-theme .limit-progress-fill {
+    background: linear-gradient(90deg, #3b82f6, #2563eb) !important;
+}
+
+/* Badges and tags */
+.dark-theme .badge-success {
+    background: rgba(16, 185, 129, 0.2) !important;
+    color: #10b981 !important;
+    border-color: rgba(16, 185, 129, 0.3) !important;
+}
+
+.dark-theme .badge-warning {
+    background: rgba(245, 158, 11, 0.2) !important;
+    color: #f59e0b !important;
+    border-color: rgba(245, 158, 11, 0.3) !important;
+}
+
+.dark-theme .resource-badge {
+    background: rgba(59, 130, 246, 0.2) !important;
+    color: #60a5fa !important;
+    border-color: rgba(59, 130, 246, 0.3) !important;
+}
+
+.dark-theme .resource-badge.free {
+    background: rgba(16, 185, 129, 0.2) !important;
+    color: #10b981 !important;
+    border-color: rgba(16, 185, 129, 0.3) !important;
+}
+
+/* Icons */
+.dark-theme .stat-icon,
+.dark-theme .resource-icon,
+.dark-theme .balance-icon,
+.dark-theme .community-icon-large,
+.dark-theme .principle-icon {
+    background: #2d3748 !important;
+    color: #60a5fa !important;
+}
+
+.dark-theme .stat-icon i,
+.dark-theme .resource-icon i,
+.dark-theme .balance-icon i,
+.dark-theme .community-icon-large i,
+.dark-theme .principle-icon i {
+    color: #60a5fa !important;
+}
+
+/* Sidebar specific */
+.dark-theme .sidebar-header,
+.dark-theme .sidebar-user,
+.dark-theme .sidebar-footer {
+    border-color: #374151 !important;
+}
+
+.dark-theme .nav-item {
+    color: #d1d5db !important;
+}
+
+.dark-theme .nav-item:hover {
+    background: #2d3748 !important;
+    color: #60a5fa !important;
+}
+
+.dark-theme .nav-item.active {
+    background: linear-gradient(90deg, rgba(59, 130, 246, 0.2), transparent) !important;
+    color: #60a5fa !important;
+    border-left-color: #3b82f6 !important;
+}
+
+.dark-theme .nav-item i {
+    color: #9ca3af !important;
+}
+
+.dark-theme .nav-item.active i {
+    color: #60a5fa !important;
+}
+
+.dark-theme .sidebar-balance {
+    background: #2d3748 !important;
+    border: 1px solid #4b5563 !important;
+}
+
+.dark-theme .sidebar-balance strong {
+    color: #f9fafb !important;
+}
+
+.dark-theme .sidebar-balance span {
+    color: #9ca3af !important;
+}
+
+.dark-theme .sidebar-logout {
+    background: transparent !important;
+    border: 1px solid #4b5563 !important;
+    color: #e5e7eb !important;
+}
+
+.dark-theme .sidebar-logout:hover {
+    background: rgba(239, 68, 68, 0.1) !important;
+    border-color: #ef4444 !important;
+    color: #ef4444 !important;
+}
+
+/* Menu toggle and profile */
+.dark-theme .menu-toggle,
+.dark-theme .user-profile-mini,
+.dark-theme .date-time-display {
+    background: #2d3748 !important;
+    border: 1px solid #4b5563 !important;
+    color: #e5e7eb !important;
+}
+
+.dark-theme .menu-toggle:hover {
+    background: #374151 !important;
+    border-color: #3b82f6 !important;
+    color: #60a5fa !important;
+}
+
+.dark-theme .user-avatar-small {
+    background: linear-gradient(135deg, #2d3748, #374151) !important;
+    color: #60a5fa !important;
+}
+
+/* Modals */
+.dark-theme .modal-content-premium {
+    background: #1f2937 !important;
+    border: 1px solid #374151 !important;
+}
+
+.dark-theme .modal-header-premium,
+.dark-theme .modal-footer-premium {
+    border-color: #374151 !important;
+}
+
+.dark-theme .modal-close {
+    background: #2d3748 !important;
+    border: 1px solid #4b5563 !important;
+    color: #e5e7eb !important;
+}
+
+.dark-theme .modal-close:hover {
+    background: #ef4444 !important;
+    border-color: #ef4444 !important;
+    color: white !important;
+}
+
+/* Toast notifications */
+.dark-theme .toast {
+    background: #1f2937 !important;
+    border: 1px solid #374151 !important;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5) !important;
+}
+
+.dark-theme .toast span {
+    color: #f3f4f6 !important;
+}
+
+/* Community cards hover effects */
+.dark-theme .community-card-premium.telegram:hover {
+    border-color: #26a5e4 !important;
+}
+.dark-theme .community-card-premium.youtube:hover {
+    border-color: #ff0000 !important;
+}
+.dark-theme .community-card-premium.instagram:hover {
+    border-color: #e1306c !important;
+}
+.dark-theme .community-card-premium.tiktok:hover {
+    border-color: #ffffff !important;
+}
+.dark-theme .community-card-premium.facebook:hover {
+    border-color: #1877f2 !important;
+}
+.dark-theme .community-card-premium.academy:hover {
+    border-color: #f59e0b !important;
+}
+
+/* Loading screen */
+.dark-theme .premium-loader {
+    background: #111827 !important;
+}
+
+.dark-theme .loader-content-3d h2 {
+    color: #f9fafb !important;
+}
+
+.dark-theme .loader-subtitle {
+    color: #9ca3af !important;
+}
+
+.dark-theme .loader-tips {
+    background: #1f2937 !important;
+    border: 1px solid #374151 !important;
+}
+
+.dark-theme .loader-tips span {
+    color: #e5e7eb !important;
+}
+
+/* Charts canvas background */
+.dark-theme canvas {
+    background: #1f2937 !important;
+}
+
+/* Links and buttons in cards */
+.dark-theme a:not(.btn-primary):not(.btn-outline):not(.btn-save-trade) {
+    color: #60a5fa !important;
+}
+
+.dark-theme a:hover:not(.btn-primary):not(.btn-outline):not(.btn-save-trade) {
+    color: #3b82f6 !important;
+}
+
+/* Input prefixes */
+.dark-theme .input-prefix {
+    color: #9ca3af !important;
+}
+
+/* Balance pill */
+.dark-theme .balance-pill {
+    background: linear-gradient(135deg, #2d3748, #1f2937) !important;
+    border: 1px solid #4b5563 !important;
+    color: #f3f4f6 !important;
+}
+
+/* Mentorship banner */
+.dark-theme .mentorship-premium-banner {
+    background: linear-gradient(135deg, #1e3a8a, #1e40af) !important;
+}
+
+.dark-theme .banner-cta-btn {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    color: white !important;
+}
+
+.dark-theme .banner-cta-btn:hover {
+    background: rgba(255, 255, 255, 0.2) !important;
+}
+
+/* P&L colors */
+.dark-theme .profit {
+    color: #10b981 !important;
+}
+
+.dark-theme .loss {
+    color: #ef4444 !important;
+}
+
+/* Ensure all text is visible */
+.dark-theme * {
+    border-color: inherit !important;
+}
+
+/* Fix for any remaining white elements */
+.dark-theme [class*="bg-white"],
+.dark-theme [class*="bg-gray-50"],
+.dark-theme [class*="bg-gray-100"] {
+    background-color: #1f2937 !important;
+}
+
+.dark-theme [class*="text-gray-"],
+.dark-theme [class*="text-dark"] {
+    color: #f3f4f6 !important;
+}
+    </style>
 </head>
 <body>
     <!-- Premium Loading Screen -->
